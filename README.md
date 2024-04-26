@@ -8,8 +8,8 @@
 
 
 
-| <img src="https://avatars.githubusercontent.com/u/129103840?v=4" width=50>  |
+| <img src="https://avatars.githubusercontent.com/u/129103840?v=4" width=50>  | <img src="https://avatars.githubusercontent.com/u/128165187?v=4" width=50>|
 :-:|:-:|:-:|:-:|
-|   Sebastián Petrini    |
-|      Colaborador       |
-| <a href="https://github.com/sebapetrini"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a> <a href="https://www.linkedin.com/in/sebastian-petrini"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a>|
+|   Sebastián Petrini    |   José Luis Espinola   |    Adriana Mercado     |    Nicolas Tierno      | 
+|      Colaborador       |      Colaborador       |      Colaborador       |      Colaborador       |
+| <a href="https://github.com/sebapetrini"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a> <a href="https://www.linkedin.com/in/sebastian-petrini"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a>| <a href="https://github.com/JoseLuisEspinola"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a> <a href="https://www.linkedin.com/in/"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a>| <a href="https://github.com/"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a> <a href="https://www.linkedin.com/in/"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a>| <a href="https://github.com/"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a> <a href="https://www.linkedin.com/in/"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a>|
