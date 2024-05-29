@@ -361,7 +361,7 @@ form .btn-form:hover {
         padding: 7px 10px;
         background-color: transparent;
         /* color | offset-x | offset-y | blur-radius */
-        text-shadow: #ffffff 1px 0 10px;
+        text-shadow: 1px 0 10px #ffffff;
     }
     
     #menu:checked ~ .navbar {
@@ -432,7 +432,7 @@ form .btn-form:hover {
 /* */
 @media (max-width:490px) {
     .menu {
-        justify-content: space-around;
+        justify-content: space-between;
     }
     
     /* .header-2 {
