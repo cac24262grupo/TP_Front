@@ -150,7 +150,7 @@ h2 {
 @keyframes enbloque {
     0%, 100% {
         /* transform: translateY(-459%);  este % es para 4 renglones*/
-        transform: translateY(-336%);
+        transform: translateY(-346%);
     }
     25% {
         transform: translateY(0);
@@ -170,7 +170,7 @@ div.contanier-nombres {
     color:  #FF4081;
     text-shadow: 4px 2px #3bd2f8;
 
-    animation: slide-in-1 17s linear infinite;
+    animation: slide-in-1 18s linear infinite;
 }
 
 @keyframes slide-in-1 {
@@ -232,6 +232,15 @@ div.contanier-nombres {
         transform: translateX(-16%);
     }
 }
+
+
+/* ******** Audio ********** */
+audio {
+    display: block;
+    width: 300px; /* Ajusta el tamaño según sea necesario */
+    color: blueviolet;
+}
+
 
 /* *********** Medias query ************ */
 /* ************************************* */

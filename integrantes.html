@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/integrantes.css">
 </head>
 <body>
+    
     <header class="header">
         <div class="menu container">
             <a href="#" class="logo">cueBanita</a>
@@ -58,7 +59,21 @@
                 JOSE LUIS
             </div>
         </div>
+
+        <!-- Musica de fondo. Lo podría haber puesto en cualquier lugar. Lo puse SIN la opción de mostrar los controles -->
+        <audio id="background-music" src="/audio/musica-fondo.mp3" autoplay loop>
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+
     </section>
 
+    
+    <!-- JavaScript para establecer el volumen inicial -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var audio = document.getElementById('background-music');
+            audio.volume = 0.5; // Establecí el volumen al 50%
+        });
+    </script>
 </body>
 </html>
