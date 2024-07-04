@@ -10,7 +10,7 @@ services:
     name: TP-Back-flask-24262-Grupo02
     runtime: python
     buildCommand: "./build.sh"
-    startCommand: "gunicorn --config src/gconfig.py 'src.app:app'"
+    startCommand: "gunicorn --config src/gconfig.py src.app:app"
     envVars:
       - key: GUNICORN_BIND
         value: "0.0.0.0:8000"
