@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "render-flask-Grupo02"
+version = "0.1.0"
+description = "TP Back deploy del proyecto con flask y postgresql en render"
+authors = ["CaC - Comisión 24262 - Grupo 02 "]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flask = "^3.0.3"
+gunicorn = "^22.0.0"
+psycopg2-binary = "^2.9.9"
+pydantic-settings = "^2.3.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

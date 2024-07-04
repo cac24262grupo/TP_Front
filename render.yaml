@@ -1,0 +1,20 @@
+databases:
+  - name: "CaC_24262_Grupo02"
+    plan: free
+    databaseName: cuebanita
+    user: cuebanita_user
+
+services:
+  - type: web
+    plan: free
+    name: TP-Back-flask-24262-Grupo02
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn --config src/gconfig.py 'src.app:app'"
+    envVars:
+      - key: GUNICORN_BIND
+        value: "0.0.0.0:8000"
+      - key: DB_URL
+        fromDatabase:
+          name: "cuebanita"
+          property: connectionString
