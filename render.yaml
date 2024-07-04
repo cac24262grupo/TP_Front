@@ -1,8 +1,6 @@
 databases:
   - name: "CaC_24262_Grupo02"
     plan: free
-    databaseName: cuebanita
-    user: cuebanita_user
 
 services:
   - type: web
