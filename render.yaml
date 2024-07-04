@@ -14,5 +14,5 @@ services:
         value: "0.0.0.0:8000"
       - key: DB_URL
         fromDatabase:
-          name: "cuebanita"
+          name: "CaC_24262_Grupo02"
           property: connectionString
