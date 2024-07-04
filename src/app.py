@@ -1,5 +1,5 @@
 from flask import Flask, jsonify
-from .database import DbSession
+from .databases import DbSession
 from .conf import settings
 
 
