@@ -51,7 +51,7 @@ def lista_generos():
 def get_pelicula(id_pelicula):
 
     with DbSession(settings.DB_URL) as session:
-        session.execute("SELECT * FROM peliculas WHERE id = %s", (id_pelicula,))
+        session.execute("SELECT * FROM peliculas WHERE id_pelicula = %s", (id_pelicula,))
         pelicula = session.fetchone()
 
     if pelicula is None:
@@ -63,7 +63,7 @@ def get_pelicula(id_pelicula):
 def get_actor(id_actor):
 
     with DbSession(settings.DB_URL) as session:
-        session.execute("SELECT * FROM actores WHERE id = %s", (id_actor,))
+        session.execute("SELECT * FROM actores WHERE id_actor = %s", (id_actor,))
         actor = session.fetchone()
 
     if actor is None:
@@ -75,7 +75,7 @@ def get_actor(id_actor):
 def get_director(id_director):
 
     with DbSession(settings.DB_URL) as session:
-        session.execute("SELECT * FROM directores WHERE id = %s", (id_director,))
+        session.execute("SELECT * FROM directores WHERE id_director = %s", (id_director,))
         director = session.fetchone()
 
     if director is None:
@@ -87,7 +87,7 @@ def get_director(id_director):
 def get_genero(id_genero):
 
     with DbSession(settings.DB_URL) as session:
-        session.execute("SELECT * FROM generos WHERE id = %s", (id_genero,))
+        session.execute("SELECT * FROM generos WHERE id_genero = %s", (id_genero,))
         genero = session.fetchone()
 
     if genero is None:
@@ -99,7 +99,7 @@ def get_genero(id_genero):
 def borra_pelicula(id_pelicula):
 
     with DbSession(settings.DB_URL) as session:
-        session.execute("DELETE FROM peliculas WHERE id = %s RETURNING *", (id_pelicula,))
+        session.execute("DELETE FROM peliculas WHERE id_pelicula = %s RETURNING *", (id_pelicula,))
         pelicula = session.fetchone()
         session.commit()
 
@@ -112,7 +112,7 @@ def borra_pelicula(id_pelicula):
 def borra_actor(id_actor):
 
     with DbSession(settings.DB_URL) as session:
-        session.execute("DELETE FROM actores WHERE id = %s RETURNING *", (id_actor,))
+        session.execute("DELETE FROM actores WHERE id_actor = %s RETURNING *", (id_actor,))
         actor = session.fetchone()
         session.commit()
 
@@ -125,7 +125,7 @@ def borra_actor(id_actor):
 def borra_director(id_director):
 
     with DbSession(settings.DB_URL) as session:
-        session.execute("DELETE FROM directores WHERE id = %s RETURNING *", (id_director,))
+        session.execute("DELETE FROM directores WHERE id_director = %s RETURNING *", (id_director,))
         director = session.fetchone()
         session.commit()
 
@@ -138,7 +138,7 @@ def borra_director(id_director):
 def borra_genero(id_genero):
 
     with DbSession(settings.DB_URL) as session:
-        session.execute("DELETE FROM generos WHERE id = %s RETURNING *", (id_genero,))
+        session.execute("DELETE FROM generos WHERE id_genero = %s RETURNING *", (id_genero,))
         genero = session.fetchone()
         session.commit()
 
@@ -264,7 +264,7 @@ def actualizar_pelicula(id_pelicula):
             duracion = %s,
             genero = %s,
             categoria = %s
-        WHERE id = %s
+        WHERE id_pelicula = %s
         RETURNING *
         """
         with DbSession(settings.DB_URL) as session:
@@ -298,7 +298,7 @@ def actualizar_actor(id_actor):
         UPDATE actores
         SET
             nombre = %s
-        WHERE id = %s
+        WHERE id_actor = %s
         RETURNING *
         """
         with DbSession(settings.DB_URL) as session:
@@ -325,7 +325,7 @@ def actualizar_director(id_director):
         UPDATE directores
         SET
             nombre = %s
-        WHERE id = %s
+        WHERE id_director = %s
         RETURNING *
         """
         with DbSession(settings.DB_URL) as session:
@@ -352,7 +352,7 @@ def actualizar_genero(id_genero):
         UPDATE generos
         SET
             nombre = %s
-        WHERE id = %s
+        WHERE id_generos = %s
         RETURNING *
         """
         with DbSession(settings.DB_URL) as session:
