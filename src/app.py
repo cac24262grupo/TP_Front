@@ -57,7 +57,7 @@ def get_pelicula(id_pelicula):
     if pelicula is None:
         return jsonify({"message": "Pelicula no encontrada"}), 404
 
-    return jsonify(pelicula)|
+    return jsonify(pelicula)
 
 @app.get("/api/actores/<id_actor>")
 def get_actor(id_actor):
