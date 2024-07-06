@@ -18,31 +18,15 @@ function addActorRow(
                     </form>        
     `;
 
-  
-  /*
-
-  <td>${name}</td>
-        <td>${description}</td>
-        <td>${release_date}</td>
-        <td>${rating}</td>
-        <td>${language}</td>
-        <td>${author}</td>
-        <td>${genres}</td>
-        <td>${characters}</td>
-        <td>
-            <button class="btn btn-danger btn-sm delete-btn">Eliminar</button>
-            <button class="btn btn-warning btn-sm edit-btn">Editar</button>
-        </td>
-        */
-  
+    const actoresForm = document.querySelector(`#actoresform-${id_actor}`);
   
     const deleteButton = row.querySelector(".delete-btn");
     deleteButton.addEventListener("click", async () => {
-    const response = await fetch(`/api/movies/${movieId}`, {
+    const response = await fetch(`/api/movies/${id_actor}`, {
       method: "DELETE",
     });
     const data = await response.json();
-    rmMovieRow(data.movie_id);
+    rmMovieRow(data.id_actor);
   });
   tableBody.appendChild(row);
 
@@ -61,9 +45,10 @@ function addActorRow(
           id_actor: id_actor,
           nombre: nombre,
         }),
-  });
+    });
+  });  
   tableBody.appendChild(row);
-});
+};
 
 window.addEventListener("DOMContentLoaded", async () => {
     const response = await fetch("/api/actores");
@@ -144,5 +129,6 @@ window.addEventListener("DOMContentLoaded", async () => {
       movie.characters
     );
   }
-});
-*/
+});*/
+
+
