@@ -9,7 +9,6 @@
 </head>
 <body>
     <header>
-
         <nav class="navbar">
           <ul>
               <li><a href="/">Inicio</a></li>
@@ -20,7 +19,20 @@
           </ul>
           
         </nav>
-    <h1>Listar Directores</h1>
+        <h1>Cargar Actor</h1>
+
+        <section id="crear-actor">
+            <form id="actor-form">
+                <fieldset>
+                  <div>
+                    <label for="nombreActor" class="form-label mt-4">Nombre</label>
+                    <input type="text" class="form-control" id="nombreActor" placeholder="Nombre del Actor">
+                  </div>                 
+                  <button type="submit" class="guardar-actor">Guardar</button>
+                </fieldset>
+              </form>
+
+        </section>
 
 
       </header>
@@ -60,4 +72,5 @@
 
 
 </body>
+<script src="static/js/actore.js"></script>
 </html>

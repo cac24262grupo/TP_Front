@@ -18,6 +18,10 @@ def integrantes():
 def listar_actores():
     return send_file("static/listar_actores.html")
 
+@app.get("/actor")
+def cargar_actores():
+    return send_file("static/actor.html")
+
 @app.get("/listar_generos")
 def listar_generos():
     return send_file("static/listar_generos.html")

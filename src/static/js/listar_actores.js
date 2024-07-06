@@ -11,7 +11,7 @@ function addActorRow(
                     <form id='actoresform-${id_actor}'>
                         <td hidden scope="row">'${id_actor}'></td>
                         <td hidden scope="row">${nombre}</td>
-                        <td><input type="text" name="nombre" value = '${nombre}'></td>
+                        <td><input type="text" name="nombreNew" value = '${nombre}'></td>
                         <td>
                            <button class="edit-btn" type="submit">✔</button>
                            <button class="delete-btn">Eliminar</button>
@@ -34,15 +34,17 @@ function addActorRow(
   const editButton = row.querySelector(".edit-btn");
   
   editButton.addEventListener("click", async () => {
-    
+    const campotexto = document.getElementById('actoresform-${id_actor}');
+    nombreNew = campotexto['nombreNew'].value;
     const response = await fetch(`/api/actores/${id_actor}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
+
         body: JSON.stringify({
           id_actor : id_actor,
-          nombre : nombre
+          nombre : nombreNew
         }),
     });
   });  
