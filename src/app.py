@@ -14,6 +14,10 @@ def index():
 def integrantes():
     return send_file("static/integrantes.html")
 
+@app.get("/Listar_actores")
+def listar_actores():
+    return send_file("static/listar_actores.html")
+
 
 @app.get("/api/peliculas")
 def lista_peliculas():
