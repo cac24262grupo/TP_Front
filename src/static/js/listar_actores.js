@@ -80,7 +80,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     const response = await fetch("/api/actores");
     const data = await response.json();
     for (actor of data) {
-      addMovieRow(
+      addActorRow(
         actor.id_actor,
         actor.nombre
       );
