@@ -11,7 +11,7 @@ def index():
     return send_file("static/index.html")
 
 @app.get("/integrantes")
-def index():
+def integrantes():
     return send_file("static/integrantes.html")
 
 
