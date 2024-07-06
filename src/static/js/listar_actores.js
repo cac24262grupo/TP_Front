@@ -22,7 +22,7 @@ function addActorRow(
   
     const deleteButton = row.querySelector(".delete-btn");
     deleteButton.addEventListener("click", async () => {
-    const response = await fetch(`/api/movies/${id_actor}`, {
+    const response = await fetch(`/api/actores/${id_actor}`, {
       method: "DELETE",
     });
     const data = await response.json();
