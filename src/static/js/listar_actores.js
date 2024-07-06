@@ -23,7 +23,7 @@ function addActorRow(id_actor,nombre) {
     // Añadir el formulario al row en lugar de establecer innerHTML directamente en el row
     row.appendChild(form);
 
-    const actoresForm = document.querySelector(`#actoresform-${id_actor}`);
+   
   
     const deleteButton = row.querySelector(".delete-btn");
     deleteButton.addEventListener("click", async () => {
