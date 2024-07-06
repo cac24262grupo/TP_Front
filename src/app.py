@@ -14,19 +14,19 @@ def index():
 def integrantes():
     return send_file("static/integrantes.html")
 
-@app.get("/Listar_actores")
+@app.get("/listar_actores")
 def listar_actores():
     return send_file("static/listar_actores.html")
 
-@app.get("/Listar_generos")
+@app.get("/listar_generos")
 def listar_generos():
     return send_file("static/listar_generos.html")
 
-@app.get("/Listar_peliculas")
+@app.get("/listar_peliculas")
 def listar_peliculas():
     return send_file("static/listar_peliculas.html")
 
-@app.get("/Listar_directores")
+@app.get("/listar_directores")
 def listar_directores():
     return send_file("static/listar_directores.html")
 
