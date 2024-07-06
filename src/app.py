@@ -18,6 +18,17 @@ def integrantes():
 def listar_actores():
     return send_file("static/listar_actores.html")
 
+@app.get("/Listar_generos")
+def listar_generos():
+    return send_file("static/listar_generos.html")
+
+@app.get("/Listar_peliculas")
+def listar_peliculas():
+    return send_file("static/listar_peliculas.html")
+
+@app.get("/Listar_directores")
+def listar_directores():
+    return send_file("static/listar_directores.html")
 
 @app.get("/api/peliculas")
 def lista_peliculas():
