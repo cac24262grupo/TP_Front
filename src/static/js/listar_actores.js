@@ -34,8 +34,6 @@ function addActorRow(
   const editButton = row.querySelector(".edit-btn");
   
   editButton.addEventListener("click", async () => {
-    const campotexto = document.getElementById('actoresform-${id_actor}');
-    nombreNew = campotexto['nombreNew'].value;
     const response = await fetch(`/api/actores/${id_actor}`, {
         method: "PUT",
         headers: {
@@ -44,7 +42,7 @@ function addActorRow(
 
         body: JSON.stringify({
           id_actor : id_actor,
-          nombre : nombreNew
+          nombre : nombre,
         }),
     });
   });  
@@ -66,73 +64,3 @@ window.addEventListener("DOMContentLoaded", async () => {
       );
     }
   });
-
-
-/*
-function rmMovieRow(movieId) {
-  const row = document.querySelector(`#movie-${movieId}`);
-  row.remove();
-}
-
-moviesForm.addEventListener("submit", async (event) => {
-  event.preventDefault();
-
-  const movieId = moviesForm["movieId"].value;
-  const movieName = moviesForm["movieName"].value;
-  const movieDescription = moviesForm["movieDescription"].value;
-  const releaseDate = moviesForm["releaseDate"].value;
-
-  const url = movieId !== "" ? `/api/movies/${movieId}` : "/api/movies";
-  const method = movieId !== "" ? `PUT` : "POST";
-
-  const response = await fetch(url, {
-    method: method,
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      name: movieName,
-      description: movieDescription,
-      release_date: releaseDate,
-      author_id: 2,
-      language: "English",
-      rating: "8.5",
-    }),
-  });
-  const data = await response.json();
-
-  if (movieId !== "") {
-    rmMovieRow(data.movie_id);
-  }
-  addMovieRow(
-    data.movie_id,
-    data.name,
-    data.description,
-    data.release_date,
-    data.rating,
-    data.language,
-    data.author_id,
-    data.genres,
-    data.characters
-  );
-
-  moviesForm.reset();
-});
-
-window.addEventListener("DOMContentLoaded", async () => {
-  const response = await fetch("/api/movies");
-  const data = await response.json();
-  for (movie of data) {
-    addMovieRow(
-      movie.movie_id,
-      movie.name,
-      movie.description,
-      movie.release_date,
-      movie.rating,
-      movie.language,
-      movie.author_id,
-      movie.genres,
-      movie.characters
-    );
-  }
-});*/
