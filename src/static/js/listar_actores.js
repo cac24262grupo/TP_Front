@@ -136,5 +136,3 @@ window.addEventListener("DOMContentLoaded", async () => {
     );
   }
 });*/
-
-
