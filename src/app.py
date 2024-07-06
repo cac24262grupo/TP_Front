@@ -10,6 +10,10 @@ app = Flask(__name__)
 def index():
     return send_file("static/index.html")
 
+@app.get("/integrantes")
+def index():
+    return send_file("static/integrantes.html")
+
 
 @app.get("/api/peliculas")
 def lista_peliculas():
