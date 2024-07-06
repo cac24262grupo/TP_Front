@@ -24,7 +24,7 @@ function addActorRow(id_actor,nombre) {
     row.appendChild(form);
 
     // Añadir el row al cuerpo de la tabla
-    tableBody.appendChild(row);
+  //  tableBody.appendChild(row);
 
    /*
     const deleteButton = row.querySelector(".delete-btn");
