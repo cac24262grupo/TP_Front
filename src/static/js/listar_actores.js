@@ -53,8 +53,8 @@ function addActorRow(id_actor,nombre) {
 };
 */
 
-document.addEventListener("DOMContentLoaded", async () => {
-  const tableBody = document.querySelector("#tabla-actores tbody");
+//document.addEventListener("DOMContentLoaded", async () => {
+ // const tableBody = document.querySelector("#tabla-actores tbody");
 
   // Suponiendo que hay más código aquí para poblar la tabla inicialmente...
 
@@ -89,7 +89,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     }
   });
-});
+//});
+// Añadir el row al cuerpo de la tabla
+tableBody.appendChild(row);
 };
 function rmActorRow(id_actor) {
   const row = document.querySelector(`#actor-${id_actor}`);
