@@ -1,4 +1,4 @@
-:root[data-theme="light"] {
+/*:root[data-theme="light"] {
     --text: rgb(0, 0, 0);
     --background: rgb(238, 229, 255);
     --primary: rgb(101, 38, 247);
@@ -9,6 +9,17 @@
 }
 
 :root[data-theme="dark"] {
+    --text: rgb(255, 255, 255);
+    --background: rgb(9, 0, 26);
+    --primary: rgb(70, 8, 217);
+    --secondary: rgb(34, 10, 67);
+    --accent: rgb(47, 6, 137);
+    --current: rgb(0, 0, 0);
+    --contrast: rgb(255, 255, 255);
+}*/
+
+
+:root {
     --text: rgb(255, 255, 255);
     --background: rgb(9, 0, 26);
     --primary: rgb(70, 8, 217);
