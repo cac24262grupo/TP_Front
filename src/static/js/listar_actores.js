@@ -26,7 +26,7 @@ function addActorRow(
       method: "DELETE",
     });
     const data = await response.json();
-    rmMovieRow(data.id_actor);
+    rmActorRow(data.id_actor);
   });
   tableBody.appendChild(row);
 
@@ -49,6 +49,11 @@ function addActorRow(
   });  
   tableBody.appendChild(row);
 };
+
+function rmActorRow(id_actor) {
+  const row = document.querySelector(`actor-${id_actor}`);
+  row.remove();
+}
 
 window.addEventListener("DOMContentLoaded", async () => {
     const response = await fetch("/api/actores");
