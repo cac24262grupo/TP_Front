@@ -43,8 +43,8 @@ function addActorRow(
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          actorForm["id_actor"].value: id_actor,
-          actorForm["nombre"].value: nombre,
+          id_actor : actorForm["id_actor"].value
+          nombre : actorForm["nombre"].value,
         }),
     });
   });  
