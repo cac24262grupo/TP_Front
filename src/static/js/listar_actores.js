@@ -9,12 +9,13 @@ function addActorRow(
   row.id = `actor-${id_actor}`;
   row.innerHTML = `
                     <form id='actoresform-${id_actor}'>
-                        <td hidden scope="row"><input type="text" name="id_actor" value = '${id_actor}'></td>
+                        <td hidden scope="row">'${id_actor}'></td>
+                        <td hidden scope="row">${nombre}</td>
                         <td><input type="text" name="nombre" value = '${nombre}'></td>
                         <td>
                            <button class="edit-btn" type="submit">✔</button>
                            <button class="delete-btn">Eliminar</button>
-                          </td>
+                        </td>
                     </form>        
     `;
 
@@ -31,11 +32,9 @@ function addActorRow(
     tableBody.appendChild(row);
 
   const editButton = row.querySelector(".edit-btn");
-  const actorForm = document.querySelector(`#actoresform-${id_actor}`);
+  
   editButton.addEventListener("click", async () => {
     
-    nombre = actorForm["nombre"].value;
-    id_actor = actorForm["id_actor"].value;
     const response = await fetch(`/api/actores/${id_actor}`, {
         method: "PUT",
         headers: {
