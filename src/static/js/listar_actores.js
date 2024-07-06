@@ -32,17 +32,17 @@ function addActorRow(
     tableBody.appendChild(row);
 
   const editButton = row.querySelector(".edit-btn");
-  
+  const { nombreNew } = actoresForm.getElementsByTagName("nombreNew");
   editButton.addEventListener("click", async () => {
     const response = await fetch(`/api/actores/${id_actor}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
-        nombre = actoresForm["nombreNew"].value
+        nombre = actoresForm["nombreNew"]
         body: JSON.stringify({
           id_actor : id_actor,
-          nombre : nombre,
+          nombre : nombreNew,
         }),
     });
   });  
