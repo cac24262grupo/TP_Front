@@ -39,7 +39,6 @@ function addActorRow(
         headers: {
           "Content-Type": "application/json",
         },
-        nombre = actoresForm["nombreNew"]
         body: JSON.stringify({
           id_actor : id_actor,
           nombre : nombreNew,
