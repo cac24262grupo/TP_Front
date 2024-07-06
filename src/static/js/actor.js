@@ -15,7 +15,7 @@ actorForm.addEventListener("submit", async (event) => {
       body: JSON.stringify({
         nombre: actorName,
       }),
-    });
+    };
     const data = await response.json(); 
     actorForm.reset();
   });
