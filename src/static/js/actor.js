@@ -7,7 +7,7 @@ actorForm.addEventListener("submit", async (event) => {
     const actorName = actorForm["nombreActor"].value;
     
  
-    const response = await fetch(`/api/actores`, {
+    const response = await fetch(`/api/actores`), {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
