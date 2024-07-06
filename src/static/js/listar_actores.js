@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 });
-
+};
 function rmActorRow(id_actor) {
   const row = document.querySelector(`#actor-${id_actor}`);
   row.remove();
