@@ -31,15 +31,11 @@ function addActorRow(
     tableBody.appendChild(row);
 
   const editButton = row.querySelector(".edit-btn");
+  const actorForm = document.querySelector(`#actoresform-${id_actor}`);
   editButton.addEventListener("click", async () => {
-    const actorForm = document.querySelector('#actoresform-${id_actor}');
+    
     nombre = actorForm["nombre"].value;
     id_actor = actorForm["id_actor"].value;
-
-   /* moviesForm["movieId"].value = movieId;
-    moviesForm["movieName"].value = name;
-    moviesForm["movieDescription"].value = description;
-    moviesForm["releaseDate"].valueAsDate = new Date(release_date);*/
     const response = await fetch(`/api/actores/${id_actor}`, {
         method: "PUT",
         headers: {
