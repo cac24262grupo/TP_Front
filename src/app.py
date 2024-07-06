@@ -268,7 +268,7 @@ def crea_genero():
     
     return jsonify(genero), 201
 
-app.put("/api/peliculas/<id_pelicula>")
+@app.put("/api/peliculas/<id_pelicula>")
 def actualizar_pelicula(id_pelicula):
     
         pelicula_data = request.get_json()
@@ -308,7 +308,7 @@ def actualizar_pelicula(id_pelicula):
         return jsonify(pelicula), 201
 
 
-app.put("/api/actores/<id_actor>")
+@app.put("/api/actores/<id_actor>")
 def actualizar_actor(id_actor):
     
         actor_data = request.get_json()
@@ -335,7 +335,7 @@ def actualizar_actor(id_actor):
         
         return jsonify(actor), 201
 
-app.put("/api/directores/<id_director>")
+@app.put("/api/directores/<id_director>")
 def actualizar_director(id_director):
     
         director_data = request.get_json()
@@ -362,7 +362,7 @@ def actualizar_director(id_director):
         
         return jsonify(director), 201
 
-app.put("/api/generos/<id_genero>")
+@app.put("/api/generos/<id_genero>")
 def actualizar_genero(id_genero):
 
         genero_data = request.get_json()
