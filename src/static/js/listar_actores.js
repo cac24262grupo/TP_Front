@@ -28,7 +28,6 @@ function addActorRow(id_actor, nombre) {
     tableBody.appendChild(row);
 
   const editButton = row.querySelector(".edit-btn");
-  const { nombreNew } = actoresForm.getElementsByTagName("nombreNew");
   editButton.addEventListener("click", async () => {
     const response = await fetch(`/api/actores/${id_actor}`, {
         method: "PUT",
@@ -37,7 +36,7 @@ function addActorRow(id_actor, nombre) {
         },
         body: JSON.stringify({
           id_actor : id_actor,
-          nombre : nombreNew,
+          nombre : nombre,
         }),
     });
   });  
