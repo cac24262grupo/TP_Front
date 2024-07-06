@@ -63,7 +63,7 @@ function addActorRow(
         }),
   });
   tableBody.appendChild(row);
-}
+});
 
 window.addEventListener("DOMContentLoaded", async () => {
     const response = await fetch("/api/actores");
