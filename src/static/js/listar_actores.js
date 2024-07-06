@@ -22,13 +22,13 @@ function addActorRow(
   
     const deleteButton = row.querySelector(".delete-btn");
     deleteButton.addEventListener("click", async () => {
-    const response = await fetch(`/api/actores/${id_actor}`, {
-      method: "DELETE",
+      const response = await fetch(`/api/actores/${id_actor}`, {
+        method: "DELETE",
+      });
+      const data = await response.json();
+      rmActorRow(data.id_actor);
     });
-    const data = await response.json();
-    rmActorRow(data.id_actor);
-  });
-  tableBody.appendChild(row);
+    tableBody.appendChild(row);
 
   const editButton = row.querySelector(".edit-btn");
   editButton.addEventListener("click", async () => {
@@ -51,7 +51,7 @@ function addActorRow(
 };
 
 function rmActorRow(id_actor) {
-  const row = document.querySelector(`actor-${id_actor}`);
+  const row = document.querySelector(`#actor-${id_actor}`);
   row.remove();
 }
 
