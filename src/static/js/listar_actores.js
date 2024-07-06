@@ -33,6 +33,9 @@ function addActorRow(
   const editButton = row.querySelector(".edit-btn");
   editButton.addEventListener("click", async () => {
     const actorForm = document.querySelector('#actoresform-${id_actor}');
+    nombre = actorForm["nombre"].value;
+    id_actor = actorForm["id_actor"].value;
+
    /* moviesForm["movieId"].value = movieId;
     moviesForm["movieName"].value = name;
     moviesForm["movieDescription"].value = description;
@@ -43,8 +46,8 @@ function addActorRow(
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          id_actor : actorForm["id_actor"].value
-          nombre : actorForm["nombre"].value,
+          id_actor : id_actor,
+          nombre : nombre
         }),
     });
   });  
