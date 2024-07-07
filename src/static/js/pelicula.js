@@ -34,13 +34,7 @@ peliculaForm.addEventListener("submit", async (event) => {
         alert("Por favor, ingrese un genero de pelicula.");
         return;
     }
-    console.log(peliculaTitulo);
-    console.log(peliculaSinopsis);
-    console.log(peliculaUrl);
-    console.log(peliculaAno);
-    console.log(peliculaDuracion);
-    console.log(peliculaGenero);
-    console.log(peliculaCategoria);
+
     const response = await fetch(`/api/peliculas`, {
       method: "POST",
       headers: {

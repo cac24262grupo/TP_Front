@@ -189,9 +189,10 @@ def crea_pelicula():
 
     query = """
     INSERT INTO peliculas (titulo, sinopsis, url_pelicula, ano_extreno, duracion, genero, categoria)
-    VALUES (%s, %s, %s, %s, %s, %s)
+    VALUES (%s, %s, %s, %s, %s, %s, %s)
     RETURNING *
     """
+
     with DbSession(settings.DB_URL) as session:
         session.execute(query, 
             vars=(
