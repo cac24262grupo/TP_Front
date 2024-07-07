@@ -13,12 +13,12 @@
     text-decoration: none;
   }
   
-  .dropdownPeli .dropdownActor .dropdownDirec .dropdownGenero {
+  .dropdown {
     float: left;
     overflow: hidden;
   }
   
-  .dropdownPeli .dropdownActor .dropdownDirec .dropdownGenero .dropbtnPeli .dropbtnDirec .dropbtnActor .dropbtnGenero {
+  .dropdown .dropbtnPeli .dropbtnDirec .dropbtnActor .dropbtnGenero {
     cursor: pointer;
     font-size: 16px;  
     border: none;
@@ -30,7 +30,7 @@
     margin: 0;
   }
   
-  .navbar a:hover, .dropdownPeli:hover .dropdownActor:hover .dropdownDirec:hover .dropdownGenero:hover .dropbtnPeli .dropbtnActor .dropbtnGenero .dropbtnDirec, .dropbtnPeli:focus .dropbtnDirec:focus .dropbtnActor:focus .dropbtnGenero:focus {
+  .navbar a:hover, .dropdown:hover .dropbtnPeli .dropbtnActor .dropbtnGenero .dropbtnDirec, .dropbtnPeli:focus .dropbtnDirec:focus .dropbtnActor:focus .dropbtnGenero:focus {
     background-color: red;
   }
   
