@@ -1,3 +1,51 @@
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunctionPeli() {
+    document.getElementById("myDropdownPeli").classList.toggle("show");
+  }
+  function myFunctionDirec() {
+    document.getElementById("myDropdownDirect").classList.toggle("show");
+  }
+  function myFunctionActor() {
+    document.getElementById("myDropdownActor").classList.toggle("show");
+  }
+  function myFunctionGenero() {
+    document.getElementById("myDropdownGenero").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtnPeli')) {
+        var myDropdown = document.getElementById("myDropdownPeli");
+        if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+        }
+    }
+    if (!e.target.matches('.dropbtnActor')) {
+        var myDropdown = document.getElementById("myDropdownActor");
+        if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+        }    
+    }
+    if (!e.target.matches('.dropbtnDirec')) {
+        var myDropdown = document.getElementById("myDropdownDirec");
+        if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+        }
+    }
+    if (!e.target.matches('.dropbtnGenero')) {
+        var myDropdown = document.getElementById("myDropdownGenero");
+        if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+        }
+    }
+  }
+
+
+
+
+
+/*
 const redirects = Array.from(document.querySelector("#navbar").querySelectorAll("[redirect]"))
 const dropdowns = Array.from(document.querySelector("#navbar").querySelectorAll(".dropdown"))
 const groups = Array.from(document.querySelector("#navbar").querySelectorAll(".group"))
@@ -135,3 +183,4 @@ const resize = () => {
 window.addEventListener("resize", resize)
 
 resize()
+*/
