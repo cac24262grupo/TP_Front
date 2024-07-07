@@ -2,8 +2,8 @@
 function addGeneroOption(id_genero, genero) {
     const opcionNew = document.getElementById("idGenero");
     const opt = document.createElement("option");
-    opt.value = id_genero;
-    opt.text = genero;
+    opt.value = ${id_genero};
+    opt.text = '${genero}';
     opcionNew.appendChild(opt);
   };
 
@@ -18,8 +18,8 @@ window.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
-/*
 
+  /*
 var select = document.getElementById("año");
 for (var i = 2000; i <= 2050; i++) {
     var option = document.createElement("option");
@@ -28,11 +28,11 @@ for (var i = 2000; i <= 2050; i++) {
     select.appendChild(option);
 }
 
+const generoForm = document.getElementById("generoForm"); // Ensure you have this element in your HTML
 
 generoForm.addEventListener("submit", async (event) => {
     event.preventDefault();
   
-    
     const generoName = generoForm["nombreGenero"].value;
     
     if (generoName.trim() === "") {
@@ -55,13 +55,4 @@ generoForm.addEventListener("submit", async (event) => {
       }
     const data = await response.json(); 
     generoForm.reset();
-  });
-
-
-
-
-
-
-<option th:each="agente : ${agentes}" th:value="${agente.id}" th:text="${agente.nombre}" />
-
-*/
+  });*/
