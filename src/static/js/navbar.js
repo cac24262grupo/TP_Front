@@ -4,7 +4,7 @@ function myFunctionPeli() {
     document.getElementById("myDropdownPeli").classList.toggle("show");
   }
   function myFunctionDirec() {
-    document.getElementById("myDropdownDirect").classList.toggle("show");
+    document.getElementById("myDropdownDirec").classList.toggle("show");
   }
   function myFunctionActor() {
     document.getElementById("myDropdownActor").classList.toggle("show");
