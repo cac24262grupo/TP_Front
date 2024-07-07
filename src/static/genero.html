@@ -4,27 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="static/css/navbar.css">
+    <link rel="stylesheet" href="static/css/navbar2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat&display=swap"
-        rel="stylesheet">
+          rel="stylesheet">
     <title>CaC-24262-Grupo02</title>
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/listar_peliculas">Listar Peliculas</a></li>
-                <li><a href="/listar_directores">Listar Directores</a></li>
-                <li><a href="/listar_actores">Listar Actores</a></li>
-                <li><a href="/listar_generos">Listar Generos</a></li>
-                <li><a href="/pelicula">Agregar Pelicula</a></li>
-                <li><a href="/actor">Agregar Actor</a></li>
-                <li><a href="/director">Agregar Director</a></li>
-                <li><a href="/genero">Agregar Genero</a></li>
-            </ul>
-          
-        </nav>
+        <div class="navbar">
+            <a>CaC-24262-Grupo02</a>
+            <a href="/">Home</a>
+            <div class="dropdown">
+              <button class="dropbtnPeli" onclick="myFunctionPeli()">Peliculas
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content" id="myDropdownPeli">
+                <a href="/pelicula">Cargar Peliculas</a>
+                <a href="/listar_peliculas">Listar Peliculas</a>
+              </div>
+              <button class="dropbtnActor" onclick="myFunctionActor()">Actores
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content" id="myDropdownActor">
+                <a href="/actor">Cargar Actores</a>
+                <a href="/listar_actores">Listar Actores</a>
+              </div>
+              <button class="dropbtnDirec" onclick="myFunctionDirec()">Directores
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content" id="myDropdownDirec">
+                <a href="/director">Cargar Directores</a>
+                <a href="/listar_directores">Listar Directores</a>
+              </div>
+              <button class="dropbtnGenero" onclick="myFunctionGenero()">Generos
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content" id="myDropdownGenero">
+                <a href="/genero">Cargar Generos</a>
+                <a href="/listar_generos">Listar Generos</a>
+              </div>
+            </div>     
+          </div> 
+      
         <h1>Cargar Genero</h1>
 
         <section id="crear-genero">
@@ -74,4 +96,5 @@
 
 </body>
 <script src="static/js/genero.js"></script>
+<script src="static/js/navbar.js"></script>
 </html>
