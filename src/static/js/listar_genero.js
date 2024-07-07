@@ -1,49 +1,47 @@
 function addGeneroRow(id_genero, genero) {
     const tableBody = document.querySelector("#tabla-generos tbody");
     const row = document.createElement("tr");
-    row.id = `actor-${id_genero}`;
+    row.id = `genero-${id_genero}`;
   
     row.innerHTML = `
-                      <form id='actoresform-${id_genero}'>
+                      <form id='generoform-${id_genero}'>
                           <td hidden scope="row">'${id_genero}'></td>
                           <td hidden scope="row">${genero}</td>
-                          <td><input type="text" name="nombreNew" value = '${genero}'></td>
+                          <td><input type="text" name="generoNew" value = '${genero}'></td>
                           <td>
                              <button class="edit-btn" type="submit">✔</button>
                              <button class="delete-btn">Eliminar</button>
                           </td>
                       </form>        
       `;
-  
-      const actoresForm = document.querySelector(`#actoresform-${id_genero}`);
     
       const deleteButton = row.querySelector(".delete-btn");
       deleteButton.addEventListener("click", async () => {
-        const response = await fetch(`/api/actores/${id_genero}`, {
+        const response = await fetch(`/api/generos/${id_genero}`, {
           method: "DELETE",
         });
         const data = await response.json();
-        rmActorRow(data.id_genero);
+        rmGeneroRow(data.id_genero);
       });
       tableBody.appendChild(row);
   
     const editButton = row.querySelector(".edit-btn");
     editButton.addEventListener("click", async () => {
-      const response = await fetch(`/api/actores/${id_genero}`, {
+      const response = await fetch(`/api/generos/${id_genero}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            id_actor : id_genero,
-            nombre : genero,
+            id_genero : id_genero,
+            genero : genero,
           }),
       });
     });  
     tableBody.appendChild(row);
   };
   
-  function rmActorRow(id_genero) {
+  function rmGeneroRow(id_genero) {
     const row = document.querySelector(`#actor-${id_genero}`);
     row.remove();
   }
