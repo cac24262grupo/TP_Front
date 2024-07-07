@@ -46,8 +46,7 @@ function addPeliculaRow(id_pelicula, titulo, sinopsis, url_pelicula, ano_extreno
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({
-            id_pelicula : id_pelicula,
+          body: JSON.stringify({          
             titulo : tituloNew,
             sinopsis : sinopsisNew,
             url_pelicula : url_peliculaNew,
@@ -55,6 +54,7 @@ function addPeliculaRow(id_pelicula, titulo, sinopsis, url_pelicula, ano_extreno
             duracion : duracionNew,
             genero : generoNew,
             categoria : categoriaNew,
+            id_pelicula : id_pelicula,
           }),
       });
     });  
@@ -74,11 +74,11 @@ function addPeliculaRow(id_pelicula, titulo, sinopsis, url_pelicula, ano_extreno
             pelicula.id_pelicula,
             pelicula.titulo,
             pelicula.sinopsis,
-            pelicula.duracion,
-            pelicula.ano_extreno,
             pelicula.url_pelicula,
-            pelicula.categoria,
-            pelicula.genero
+            pelicula.ano_extreno,
+            pelicula.duracion,
+            pelicula.genero,
+            pelicula.categoria
         );
       }
 });
