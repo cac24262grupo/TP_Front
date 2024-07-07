@@ -54,7 +54,7 @@ function addPeliculaRow(id_pelicula, titulo, sinopsis, url_pelicula, ano_extreno
             ano_extreno : ano_extrenoNew,
             duracion : duracionNew,
             genero : generoNew,
-            categoria : categoriaNew
+            categoria : categoriaNew,
           }),
       });
     });  

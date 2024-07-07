@@ -302,7 +302,7 @@ def actualizar_pelicula(id_pelicula):
             categoria = %s
         WHERE id_pelicula = %s
         RETURNING *
-        """
+        """ 
         with DbSession(settings.DB_URL) as session:
             session.execute(query, 
                 vars=(
