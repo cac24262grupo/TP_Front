@@ -1,20 +1,13 @@
 const peliculaForm = document.querySelector("#pelicula-form");
 
 
+
 function addGeneroOption(id_genero, genero) {
-    const opcion = document.querySelector("#form-select-genero");
+    const opcionNew = document.querySelector("#form-select-genero");
     const opt = document.createElement("option");
-    //opt.value = `genero-${id_genero}`;
-    //opt.text = genero;
-    opt.innerHTML = `
-                    <option value="${id_genero}" text="${genero}" />       
-      `;
-    
-      
-    
-   
-     
-    opcion.append(opt);
+    opt.value = id_genero;
+    opt.text = genero;
+    opcionNew.appendChild(opt);
   };
 
 window.addEventListener("DOMContentLoaded", async () => {
