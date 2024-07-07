@@ -42,7 +42,7 @@ function addGeneroRow(id_genero, genero) {
   };
   
   function rmGeneroRow(id_genero) {
-    const row = document.querySelector(`#actor-${id_genero}`);
+    const row = document.querySelector(`#genero-${id_genero}`);
     row.remove();
   }
   
