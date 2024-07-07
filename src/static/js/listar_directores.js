@@ -1,4 +1,4 @@
-function addActorRow(id_director, nombre) {
+function addDirectorRow(id_director, nombre) {
     const tableBody = document.querySelector("#tabla-directores tbody");
     const row = document.createElement("tr");
     row.id = `actor-${id_actor}`;
@@ -52,9 +52,9 @@ function addActorRow(id_director, nombre) {
       const response = await fetch("/api/directores");
       const data = await response.json();
       for (director of data) {
-        addActorRow(
-          actor.id_director,
-          actor.nombre
+        addDirectorRow(
+          director.id_director,
+          director.nombre
         );
       }
     });

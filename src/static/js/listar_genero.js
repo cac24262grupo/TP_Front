@@ -1,4 +1,4 @@
-function addActorRow(id_genero, genero) {
+function addGeneroRow(id_genero, genero) {
     const tableBody = document.querySelector("#tabla-generos tbody");
     const row = document.createElement("tr");
     row.id = `actor-${id_genero}`;
@@ -52,9 +52,9 @@ function addActorRow(id_genero, genero) {
       const response = await fetch("/api/generos");
       const data = await response.json();
       for (genero of data) {
-        addActorRow(
-          actor.id_genero,
-          actor.genero
+        addGeneroRow(
+          genero.id_genero,
+          genero.genero
         );
       }
     });
