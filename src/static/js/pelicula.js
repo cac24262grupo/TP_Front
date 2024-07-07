@@ -12,9 +12,9 @@ function addGeneroOption(id_genero, genero) {
     
       
     
-    
+   
      
-    opcion.appendChild(opt);
+    opcion.append(opt);
   };
 
 window.addEventListener("DOMContentLoaded", async () => {
