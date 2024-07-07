@@ -22,6 +22,18 @@ def listar_actores():
 def cargar_actores():
     return send_file("static/actor.html")
 
+@app.get("/director")
+def cargar_directores():
+    return send_file("static/director.html")
+
+@app.get("/genero")
+def cargar_generos():
+    return send_file("static/genero.html")
+
+@app.get("/pelicula")
+def cargar_peliculas():
+    return send_file("static/pelicula.html")
+
 @app.get("/listar_generos")
 def listar_generos():
     return send_file("static/listar_generos.html")
