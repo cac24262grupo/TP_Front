@@ -1,4 +1,4 @@
-const actorForm = document.querySelector("#actor-form");
+const generoForm = document.querySelector("#genero-form");
 
 generoForm.addEventListener("submit", async (event) => {
     event.preventDefault();
