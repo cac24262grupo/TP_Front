@@ -46,6 +46,53 @@
             </div>
             </div>     
         </div> 
+        <h1>Cargar Pelicula</h1>
+
+        <section id="crear-pelicula">
+            <form id="pelicula-form">
+                <fieldset>
+                  <div>
+                    <label for="tituloPelicula" class="form-label mt-4">Titulo de la Pelicula</label>
+                    <input type="text" class="form-control" id="tituloPelicula" placeholder="Titulo de la Pelicula">
+                  </div>
+                  <div>
+                    <label for="sipnosisPelicula" class="form-label mt-4">Sinopsis de la Película</label>
+                    <input type="text" class="form-control" id="sinopsisPelicula" placeholder="Sinopsis de la Pelicula">
+                  </div>
+
+                  <div>
+                    <label for="urlPelicula" class="form-label mt-4">URL de la Pelicula</label>
+                    <input type="text" class="form-control" id="urlPelicula" placeholder="URL de la Pelicula">
+                  </div>
+
+                  <div>
+                    <label for="anoPelicula" class="form-label mt-4">Año de estreno de la Pelicula</label>
+                    <input type="text" class="form-control" id="anoPelicula" placeholder="Año de estreno de la Pelicula">
+                  </div>
+
+                  <div>
+                    <label for="duracionPelicula" class="form-label mt-4">duracion de la Pelicula (minutos)</label>
+                    <input type="number" class="form-control" id="tituloPelicula" placeholder=0>
+                  </div>
+
+                  <div>
+                    <label for="generoPelicula" class="form-label mt-4">Genero de la Pelicula</label>                  
+                    <select class="form-select-genero" name="idGenero">
+                        <option selected>Seleccionar Genero</option>
+                    </select>                   
+                  </div>
+
+                  <div>
+                    <label for="categoriaPelicula" class="form-label mt-4">Categoría de la Pelicula</label>
+                    <input type="text" class="form-control" id="categoriaPelicula" placeholder="Categoria de la Pelicula">
+                  </div>
+
+                  <button type="submit" class="guardar-pelicula">Guardar</button>
+                </fieldset>
+              </form>
+
+        </section>
+
   
     </header>
 
@@ -77,6 +124,6 @@
       </footer>
     
       <script src="static/js/navbar.js"></script>
-      <script src="static/js/navbar.js"></script>
+      <script src="static/js/pelicula.js"></script>
 </body>
 </html>
