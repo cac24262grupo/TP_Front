@@ -1,9 +1,6 @@
-const peliculaForm = document.querySelector("#pelicula-form");
-
-
 
 function addGeneroOption(id_genero, genero) {
-    const opcionNew = document.querySelector("#form-select-genero");
+    const opcionNew = document.getElementById("idGenero");
     const opt = document.createElement("option");
     opt.value = id_genero;
     opt.text = genero;
@@ -22,6 +19,16 @@ window.addEventListener("DOMContentLoaded", async () => {
   });
 
 /*
+
+var select = document.getElementById("año");
+for (var i = 2000; i <= 2050; i++) {
+    var option = document.createElement("option");
+    option.value = i;
+    option.text = i;
+    select.appendChild(option);
+}
+
+
 generoForm.addEventListener("submit", async (event) => {
     event.preventDefault();
   
