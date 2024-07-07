@@ -387,7 +387,7 @@ def actualizar_genero(id_genero):
         UPDATE generos
         SET
             genero = %s
-        WHERE id_generos = %s
+        WHERE id_genero = %s
         RETURNING *
         """
         with DbSession(settings.DB_URL) as session:
