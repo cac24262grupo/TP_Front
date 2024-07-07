@@ -5,24 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="static/css/style.css">
   <link rel="stylesheet" href="static/css/navbar.css">
+  <link rel="stylesheet" href="static/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat&display=swap"
+        rel="stylesheet">
   <title>CaC-24262-Grupo02</title>
 </head>
 <body>
   <header>
 
-    <nav class="navbar">
-      <ul>
-          <li><a href="/">Inicio</a></li>
-          <li><a href="/listar_peliculas">Listar Peliculas</a></li>
-          <li><a href="/listar_directores">Listar Directores</a></li>
-          <li><a href="/listar_actores">Listar Actores</a></li>
-          <li><a href="/listar_generos">Listar Generos</a></li>
-          <li><a href="/pelicula">Agregar Pelicula</a></li>
-          <li><a href="/actor">Agregar Actor</a></li>
-          <li><a href="/director">Agregar Director</a></li>
-          <li><a href="/genero">Agregar Genero</a></li>
-      </ul>
-      
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">CaC-24262-Grupo02</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Peliculas</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/pelicula">Cargar Peliculas</a>
+                <a class="dropdown-item" href="/listar_peliculas">Listar Peliculas</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Directores</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/director">Cargar Directores</a>
+                <a class="dropdown-item" href="/listar_directores">Listar Directores</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Actores</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/actor">Cargar Actores</a>
+                <a class="dropdown-item" href="/listar_actores">Listar Actores</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Generos</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/genero">Cargar Generos</a>
+                <a class="dropdown-item" href="/listar_generos">Listar Generos</a>
+              </div>
+            </li>           
+          </ul>
+        </div>
+      </div>
     </nav>
 
   </header>
