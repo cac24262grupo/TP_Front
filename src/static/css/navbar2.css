@@ -39,7 +39,7 @@
     margin: 0;
   }
   
-  .navbar a:hover button:hover, .dropdown:hover .dropbtnPeli .dropbtnActor .dropbtnGenero .dropbtnDirec, .dropbtnPeli:focus .dropbtnDirec:focus .dropbtnActor:focus .dropbtnGenero:focus {
+  .navbar a:hover, .dropdown:hover, .dropbtnPeli .dropbtnActor .dropbtnGenero .dropbtnDirec, .dropbtnPeli:focus, .dropbtnDirec:focus, .dropbtnActor:focus, .dropbtnGenero:focus {
     background-color: red;
   }
   
