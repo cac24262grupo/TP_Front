@@ -2,17 +2,13 @@ const peliculaForm = document.querySelector("#pelicula-form");
 
 peliculaForm.addEventListener("submit", async (event) => {
     event.preventDefault();
-  
-    
-    const peliculaTitulo = actorForm["tituloPelicula"].value;
-
-
-    const peliculaSinopsis = actorForm["sinopsisPelicula"].value;
-    const peliculaUrl = actorForm["urlPelicula"].value;
-    const peliculaAno = actorForm["anoPelicula"].value;
-    const peliculaDuracion = actorForm["duracionPelicula"].value;
-    const peliculaGenero = actorForm["idGenero"].value;
-    const peliculaCategoria = actorForm["categoriaPelicula"].value;
+    const peliculaTitulo = peliculaForm["tituloPelicula"].value;
+    const peliculaSinopsis = peliculaForm["sinopsisPelicula"].value;
+    const peliculaUrl = peliculaForm["urlPelicula"].value;
+    const peliculaAno = peliculaForm["anoPelicula"].value;
+    const peliculaDuracion = peliculaForm["duracionPelicula"].value;
+    const peliculaGenero = peliculaForm["idGenero"].value;
+    const peliculaCategoria = peliculaForm["categoriaPelicula"].value;
 
     if (peliculaTitulo.trim() === "") {
         alert("Por favor, ingrese un titulo de pelicula.");
@@ -79,42 +75,3 @@ window.addEventListener("DOMContentLoaded", async () => {
       );
     }
 });
-
-
-  /*
-var select = document.getElementById("año");
-for (var i = 2000; i <= 2050; i++) {
-    var option = document.createElement("option");
-    option.value = i;
-    option.text = i;
-    select.appendChild(option);
-}
-
-const generoForm = document.getElementById("generoForm"); // Ensure you have this element in your HTML
-
-generoForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
-  
-    const generoName = generoForm["nombreGenero"].value;
-    
-    if (generoName.trim() === "") {
-        alert("Por favor, ingrese un nombre del genero.");
-        return;
-      }
- 
-    const response = await fetch(`/api/generos`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        genero: generoName,
-      }),
-    });
-    if (!response.ok) {
-        alert("Hubo un problema al agregar el genero.");
-        return;
-      }
-    const data = await response.json(); 
-    generoForm.reset();
-  });*/
