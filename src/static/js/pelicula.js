@@ -3,14 +3,14 @@ function addGeneroOption(id_genero, genero) {
     const opcionNew = document.getElementById("idGenero");
     const opt = document.createElement("option");
     opt.value = id_genero;
-    opt.text = '${genero}';
+    opt.text = genero;
     opcionNew.appendChild(opt);
   };
 
 window.addEventListener("DOMContentLoaded", async () => {
     const response = await fetch("/api/generos");
     const data = await response.json();
-    for (genero of data) {
+    for (const genero of data) {
       addGeneroOption(
         genero.id_genero,
         genero.genero
