@@ -1,5 +1,3 @@
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
 function myFunctionPeli() {
     document.getElementById("myDropdownPeli").classList.toggle("show");
   }
@@ -12,8 +10,7 @@ function myFunctionPeli() {
   function myFunctionGenero() {
     document.getElementById("myDropdownGenero").classList.toggle("show");
   }
-  
-  // Close the dropdown if the user clicks outside of it
+
   window.onclick = function(e) {
     if (!e.target.matches('.dropbtnPeli')) {
         var myDropdown = document.getElementById("myDropdownPeli");
