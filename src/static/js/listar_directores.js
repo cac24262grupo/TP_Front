@@ -25,7 +25,7 @@ function addDirectorRow(id_director, nombre) {
         rmDirectorRow(data.id_director);
       });
       tableBody.appendChild(row);
-  
+      const nombreNew = row.querySelector("input[name=nombreNew]").value;
     const editButton = row.querySelector(".edit-btn");
     editButton.addEventListener("click", async () => {
       const response = await fetch(`/api/directores/${id_director}`, {
@@ -35,7 +35,7 @@ function addDirectorRow(id_director, nombre) {
           },
           body: JSON.stringify({
             id_director : id_director,
-            nombre : nombre,
+            nombre : nombreNew,
           }),
       });
     });  
