@@ -4,7 +4,7 @@
     font-family: Arial, Helvetica, sans-serif;
   }
   
-  .navbar a {
+  .navbar a button {
     float: left;
     font-size: 16px;
     color: white;
@@ -30,7 +30,7 @@
     margin: 0;
   }
   
-  .navbar a:hover, .dropdown:hover .dropbtnPeli .dropbtnActor .dropbtnGenero .dropbtnDirec, .dropbtnPeli:focus .dropbtnDirec:focus .dropbtnActor:focus .dropbtnGenero:focus {
+  .navbar a:hover button:hover, .dropdown:hover .dropbtnPeli .dropbtnActor .dropbtnGenero .dropbtnDirec, .dropbtnPeli:focus .dropbtnDirec:focus .dropbtnActor:focus .dropbtnGenero:focus {
     background-color: red;
   }
   
