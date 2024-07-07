@@ -24,7 +24,7 @@ function addGeneroRow(id_genero, genero) {
         rmGeneroRow(data.id_genero);
       });
       tableBody.appendChild(row);
-  
+    const generoNew = row.querySelector("input[name=generoNew]").value;  
     const editButton = row.querySelector(".edit-btn");
     editButton.addEventListener("click", async () => {
       const response = await fetch(`/api/generos/${id_genero}`, {
@@ -34,7 +34,7 @@ function addGeneroRow(id_genero, genero) {
           },
           body: JSON.stringify({
             id_genero : id_genero,
-            genero : genero,
+            genero : generoNew,
           }),
       });
     });  
