@@ -266,14 +266,14 @@ def crea_genero():
     genero_data = request.get_json()
 
     query = """
-    INSERT INTO generos (nombre)
+    INSERT INTO generos (genero)
     VALUES (%s)
     RETURNING *
     """
     with DbSession(settings.DB_URL) as session:
         session.execute(query, 
             vars=(
-            genero_data["nombre"],
+            genero_data["genero"],
         ),
     )
         genero = session.fetchone()               
@@ -386,14 +386,14 @@ def actualizar_genero(id_genero):
         query = """
         UPDATE generos
         SET
-            nombre = %s
+            genero = %s
         WHERE id_generos = %s
         RETURNING *
         """
         with DbSession(settings.DB_URL) as session:
             session.execute(query, 
                 vars=(
-                genero_data["nombre"],
+                genero_data["genero"],
                 id_genero,
             ),
         )

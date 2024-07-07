@@ -26,9 +26,10 @@ function addActorRow(id_actor, nombre) {
       rmActorRow(data.id_actor);
     });
     tableBody.appendChild(row);
-    const nombreNew = row.querySelector("input[name=nombreNew]").value;   
+      
   const editButton = row.querySelector(".edit-btn");
   editButton.addEventListener("click", async () => {
+    const nombreNew = row.querySelector("input[name=nombreNew]").value; 
     const response = await fetch(`/api/actores/${id_actor}`, {
         method: "PUT",
         headers: {
