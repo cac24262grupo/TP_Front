@@ -1,7 +1,7 @@
 function addDirectorRow(id_director, nombre) {
     const tableBody = document.querySelector("#tabla-directores tbody");
     const row = document.createElement("tr");
-    row.id = `director-${id_actor}`;
+    row.id = `director-${id_director}`;
   
     row.innerHTML = `
                       <form id='directoresform-${id_director}'>
