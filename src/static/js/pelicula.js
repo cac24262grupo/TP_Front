@@ -1,10 +1,13 @@
 
 function addGeneroOption(id_genero, genero) {
     const opcionNew = document.getElementById("idGenero");
-    const opt = document.createElement("option");
+
+    opcionNew.innerHTML += `<option value="${id_genero}">${genero}</option>`;
+    
+   /* const opt = document.createElement("option");
     opt.value = id_genero;
     opt.text = genero;
-    opcionNew.appendChild(opt);
+    opcionNew.appendChild(opt);*/
   };
 
 window.addEventListener("DOMContentLoaded", async () => {
