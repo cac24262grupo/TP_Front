@@ -2,7 +2,7 @@
 function addGeneroOption(id_genero, genero) {
     const opcionNew = document.getElementById("idGenero");
     const opt = document.createElement("option");
-    opt.value = ${id_genero};
+    opt.value = id_genero;
     opt.text = '${genero}';
     opcionNew.appendChild(opt);
   };
