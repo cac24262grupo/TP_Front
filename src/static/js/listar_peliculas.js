@@ -1,7 +1,7 @@
 function addPeliculaRow(id_pelicula, titulo, sinopsis, url_pelicula, ano_extreno,duracion,genero,categoria) {
     const tableBody = document.querySelector("#tabla-peliculas tbody");
     const row = document.createElement("tr");
-    row.id = `pelicula-${id_actor}`;
+    row.id = `pelicula-${id_pelicula}`;
   
     row.innerHTML = `
                       <form id='peliculaform-${id_pelicula}'>
