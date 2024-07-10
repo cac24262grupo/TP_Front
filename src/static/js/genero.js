@@ -2,14 +2,12 @@ const generoForm = document.querySelector("#genero-form");
 
 generoForm.addEventListener("submit", async (event) => {
     event.preventDefault();
-  
-    
-    const generoName = generoForm["nombreGenero"].value;
-    
+      
+    const generoName = generoForm["nombreGenero"].value;    
     if (generoName.trim() === "") {
-        alert("Por favor, ingrese un nombre del genero.");
-        return;
-      }
+      alert("Por favor, ingrese un nombre del genero.");
+      return;
+    }
  
     const response = await fetch(`/api/generos`, {
       method: "POST",
@@ -21,9 +19,9 @@ generoForm.addEventListener("submit", async (event) => {
       }),
     });
     if (!response.ok) {
-        alert("Hubo un problema al agregar el genero.");
-        return;
-      }
+      alert("Hubo un problema al agregar el genero.");
+      return;
+    }
     const data = await response.json(); 
     generoForm.reset();
-  });
+});

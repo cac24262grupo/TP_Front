@@ -2,7 +2,6 @@ function addActorRow(id_actor, nombre) {
   const tableBody = document.querySelector("#tabla-actores tbody");
   const row = document.createElement("tr");
   row.id = `actor-${id_actor}`;
-
   row.innerHTML = `
                     <form id='actoresform-${id_actor}'>
                         <td hidden scope="row">'${id_actor}'></td>
@@ -14,10 +13,9 @@ function addActorRow(id_actor, nombre) {
                         </td>
                     </form>        
     `;
-
     const actoresForm = document.querySelector(`#actoresform-${id_actor}`);
-  
     const deleteButton = row.querySelector(".delete-btn");
+    
     deleteButton.addEventListener("click", async () => {
       const response = await fetch(`/api/actores/${id_actor}`, {
         method: "DELETE",
@@ -26,11 +24,11 @@ function addActorRow(id_actor, nombre) {
       rmActorRow(data.id_actor);
     });
     tableBody.appendChild(row);
-      
-  const editButton = row.querySelector(".edit-btn");
-  editButton.addEventListener("click", async () => {
-    const nombreNew = row.querySelector("input[name=nombreNew]").value; 
-    const response = await fetch(`/api/actores/${id_actor}`, {
+    const editButton = row.querySelector(".edit-btn");
+  
+    editButton.addEventListener("click", async () => {
+      const nombreNew = row.querySelector("input[name=nombreNew]").value; 
+      const response = await fetch(`/api/actores/${id_actor}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -39,9 +37,9 @@ function addActorRow(id_actor, nombre) {
           id_actor : id_actor,
           nombre : nombreNew,
         }),
-    });
-  });  
-  tableBody.appendChild(row);
+      });
+    });  
+    tableBody.appendChild(row);
 };
 
 function rmActorRow(id_actor) {
@@ -50,12 +48,9 @@ function rmActorRow(id_actor) {
 }
 
 window.addEventListener("DOMContentLoaded", async () => {
-    const response = await fetch("/api/actores");
-    const data = await response.json();
+  const response = await fetch("/api/actores");
+  const data = await response.json();
     for (actor of data) {
-      addActorRow(
-        actor.id_actor,
-        actor.nombre
-      );
+      addActorRow(actor.id_actor, actor.nombre);
     }
-  });
+});

@@ -1,8 +1,7 @@
 function addDirectorRow(id_director, nombre) {
     const tableBody = document.querySelector("#tabla-directores tbody");
     const row = document.createElement("tr");
-    row.id = `director-${id_director}`;
-  
+    row.id = `director-${id_director}`; 
     row.innerHTML = `
                       <form id='directoresform-${id_director}'>
                           <td hidden scope="row">'${id_director}'></td>
@@ -13,20 +12,19 @@ function addDirectorRow(id_director, nombre) {
                              <button class="delete-btn">Eliminar</button>
                           </td>
                       </form>        
-      `;
-  
-      
-      const deleteButton = row.querySelector(".delete-btn");
-      deleteButton.addEventListener("click", async () => {
+      `;     
+    const deleteButton = row.querySelector(".delete-btn");
+
+    deleteButton.addEventListener("click", async () => {
         const response = await fetch(`/api/directores/${id_director}`, {
           method: "DELETE",
         });
         const data = await response.json();
         rmDirectorRow(data.id_director);
-      });
-      tableBody.appendChild(row);
-      
+    });
+    tableBody.appendChild(row);      
     const editButton = row.querySelector(".edit-btn");
+
     editButton.addEventListener("click", async () => {
       const nombreNew = row.querySelector("input[name=nombreNew]").value;
       const response = await fetch(`/api/directores/${id_director}`, {
@@ -41,20 +39,17 @@ function addDirectorRow(id_director, nombre) {
       });
     });  
     tableBody.appendChild(row);
-  };
+};
   
-  function rmDirectorRow(id_director) {
-    const row = document.querySelector(`#director-${id_director}`);
-    row.remove();
+function rmDirectorRow(id_director) {
+  const row = document.querySelector(`#director-${id_director}`);
+  row.remove();
+}
+  
+window.addEventListener("DOMContentLoaded", async () => {
+  const response = await fetch("/api/directores");
+  const data = await response.json();
+  for (director of data) {
+    addDirectorRow(director.id_director, director.nombre);
   }
-  
-  window.addEventListener("DOMContentLoaded", async () => {
-      const response = await fetch("/api/directores");
-      const data = await response.json();
-      for (director of data) {
-        addDirectorRow(
-          director.id_director,
-          director.nombre
-        );
-      }
-    });
+});
