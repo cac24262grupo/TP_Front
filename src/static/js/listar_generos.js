@@ -37,6 +37,12 @@ function addGeneroRow(id_genero, genero) {
             genero : generoNew,
           }),
       });
+      if (!response.ok) {
+        alert("Hubo un problema al editar el género.");
+        return;
+      }
+      const data = await response.json();
+      alert("El género fue editado exitosamente!!!!");
     });  
     tableBody.appendChild(row);
 };

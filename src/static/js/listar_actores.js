@@ -38,6 +38,12 @@ function addActorRow(id_actor, nombre) {
           nombre : nombreNew,
         }),
       });
+      if (!response.ok) {
+        alert("Hubo un problema al editar el actor.");
+        return;
+      }
+      const data = await response.json();
+      alert("El actor fue editado exitosamente!!!!");
     });  
     tableBody.appendChild(row);
 };

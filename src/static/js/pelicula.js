@@ -53,7 +53,8 @@ peliculaForm.addEventListener("submit", async (event) => {
       alert("Hubo un problema al agregar la pelicula.");
       return;
     }
-    const data = await response.json(); 
+    const data = await response.json();
+    alert("Película agregada exitosamente!!!!");
     peliculaForm.reset();
 });
 

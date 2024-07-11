@@ -55,7 +55,13 @@ function addPeliculaRow(id_pelicula, titulo, sinopsis, url_pelicula, ano_extreno
           id_pelicula : id_pelicula,
         }),
       });
-    });  
+      if (!response.ok) {
+        alert("Hubo un problema al editar la pelicula.");
+        return;
+      }
+      const data = await response.json();
+      alert("Película editada exitosamente!!!!"); 
+    });    
     tableBody.appendChild(row);
 };
   

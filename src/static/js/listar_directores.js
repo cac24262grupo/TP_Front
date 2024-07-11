@@ -37,6 +37,12 @@ function addDirectorRow(id_director, nombre) {
             nombre : nombreNew,
           }),
       });
+      if (!response.ok) {
+        alert("Hubo un problema al editar el director.");
+        return;
+      }
+      const data = await response.json();
+      alert("El director fue editado exitosamente!!!!");
     });  
     tableBody.appendChild(row);
 };

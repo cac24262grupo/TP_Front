@@ -23,5 +23,6 @@ generoForm.addEventListener("submit", async (event) => {
       return;
     }
     const data = await response.json(); 
+    alert("Genero agregado exitosamente!!!!");
     generoForm.reset();
 });

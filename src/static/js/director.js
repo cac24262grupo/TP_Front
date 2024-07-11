@@ -23,5 +23,6 @@ directorForm.addEventListener("submit", async (event) => {
       return;
     }
     const data = await response.json(); 
+    alert("Director agregado exitosamente!!!!");
     directorForm.reset();
 });
